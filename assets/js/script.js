@@ -1,6 +1,8 @@
 window.addEventListener("load", function () {
-	document.querySelector(".left").style.left = "-60%";
-	document.querySelector(".right").style.right = "-60%"
+	setTimeout(function () {	
+		document.querySelector(".left").style.left = "-50%";
+		document.querySelector(".right").style.right = "-50%"
+	}, 600)
 });
 
 function alert(text) {
