@@ -1,31 +1,44 @@
-document.querySelector(".btn").addEventListener("click", function() {
-	Swal.fire({
+window.addEventListener("load", function () {
+	document.querySelector(".left").style.left = "-60%";
+	document.querySelector(".right").style.right = "-60%"
+});
+
+function alert(text) {
+	return Swal.fire({
 		title: '<i class="far fa-grin-beam"></i>',
-		text: 'Buat kamu yang entah sengaja atau gak sengaja buka halaman ini,,',
+		text: text,
 		confirmButtonText: '<i class="fas fa-forward"></i>',
-	}).then((result) => {
-		if (result.isConfirmed) {
-			Swal.fire({
-				title: '<i class="far fa-grin-beam"></i>',
-				text: 'Aku cuma mau ngingetin sesuatu..',
-				confirmButtonText: '<i class="fas fa-forward"></i>',
-			}).then((result) => {
-				if (result.isConfirmed) {
-					Swal.fire({
-						title: '<i class="far fa-grin-beam"></i>',
-						text: 'Jangan Lupa Tersenyum Hari Ini :)',
-						confirmButtonText: '<i class="fas fa-forward"></i>',
-					}).then((result) => {
-						if (result.isConfirmed) {
-							Swal.fire({
-								title: '<i class="far fa-grin-beam"></i>',
-								text: 'Udah itu aja .',
-								confirmButtonText: '<i class="fas fa-forward"></i>',
+	})
+}
+
+document.querySelector(".btn").addEventListener("click", function() {
+	alert("Buat kamu yang entah sengaja atau gak sengaja buka halaman ini,,").then((res) => {
+		if (res.isConfirmed) {
+			alert("Aku cuma mau ngingetin sesuatu..").then((res) => {
+				if (res.isConfirmed) {
+					alert("Tetep semangat ya ...").then((res) => {
+						if (res.isConfirmed) {
+							alert("Tetep kuat").then((res) => {
+								if (res.isConfirmed) {
+									alert("Tetep jaga kesehatan").then((res) => {
+										if (res.isConfirmed) {
+											alert("Udah itu aja .").then((res) => {
+												if (res.isConfirmed) {
+													alert("Eh bentar, ada satu lagi..").then((res) => {
+														if (res.isConfirmed) {
+															alert("Jangan Lupa Tersenyum Hari Ini :)")
+														}
+													})
+												}
+											})
+										}
+									})
+								}
 							})
 						}
 					})
 				}
 			})
-		} 
+		}
 	})
-});
+})
