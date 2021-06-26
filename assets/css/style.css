@@ -22,18 +22,18 @@ body {
    width: 50%;
    position: fixed;
    z-index: 10;
+   transition: linear 1.2s;
+   transition-property: left, right;
 }
 
 .left {
    left: 0;
    background-color: #1e2022;
-   transition: linear 1.2s;
 }
 
 .right {
    right: 0;
    background-color: #1e2022;
-   transition: linear 1.2s;
 }
 
 .btn {
