@@ -22,7 +22,7 @@ body {
    width: 50%;
    position: fixed;
    z-index: 10;
-   transition: linear 1.2s;
+   transition: linear 1s;
    transition-property: left, right;
 }
 
