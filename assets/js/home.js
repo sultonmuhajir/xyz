@@ -1,9 +1,21 @@
+let data = sessionStorage.getItem('key');
+if (data != "sulton..") {
+   document.location = "index.html";
+}
+document.querySelector(".logout").addEventListener("click", function() {
+   sessionStorage.removeItem('key');
+   sessionStorage.clear();
+   document.location = "index.html";
+});
+
+
 window.addEventListener("load", function () {
 	setTimeout(function () {	
 		document.querySelector(".left").style.left = "-50%";
 		document.querySelector(".right").style.right = "-50%"
 	}, 500)
 });
+
 
 function alert(text) {
 	return Swal.fire({
@@ -12,6 +24,7 @@ function alert(text) {
 		confirmButtonText: '<i class="fas fa-forward"></i>',
 	})
 }
+
 
 document.querySelector(".btn").addEventListener("click", function() {
 	alert("Buat kamu yang entah sengaja atau gak sengaja buka halaman ini,,").then((res) => {

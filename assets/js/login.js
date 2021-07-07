@@ -6,39 +6,38 @@ window.addEventListener("load", function() {
 });
 
 
-const inp = document.getElementById("pw");
 const form = document.querySelector("form")
-const error = document.querySelector(".error")
-const btn = document.querySelector(".btn")
+const input = document.getElementById("pw");
+const error = document.querySelector("p")
+const btn = document.querySelector("button")
 
 
 function showPassword() {
-   if (inp.type === "password") {
-      inp.type = "text";
+   if (input.type === "password") {
+      input.type = "text";
    } else {
-      inp.type = "password";
+      input.type = "password";
    }
 }
 
 
-inp.addEventListener("keyup", function(event) {
+input.addEventListener("keyup", function(event) {
    this.style.border = "1px solid #aaa";
    error.style.visibility = "hidden";
    if (event.keyCode === 13) {
-      event.preventDefault();
       btn.click();
    }
 });
 
 
-form.onsubmit = () => { return false; }
-function login() {
-   if (inp.value == "" || inp.value != "sulton..") {
-      inp.value = "";
-      inp.focus();
-      inp.style.border = "1px solid red";
+form.onsubmit = () => {
+   if (input.value == "" || input.value != "sulton..") {
+      input.value = "";
+      input.focus();
+      input.style.border = "1px solid red";
       error.style.visibility = "visible";
+      return false;
    } else {
-      document.location = "home.html"
+      sessionStorage.setItem('key', input.value);
    }
 }

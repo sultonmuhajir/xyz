@@ -89,7 +89,7 @@ body {
    top: -3px;
 }
 
-.box .error {
+.box p {
    font-size: .8rem;
    margin: 50px 0 10px;
    text-align: center;
