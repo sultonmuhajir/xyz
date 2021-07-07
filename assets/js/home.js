@@ -1,14 +1,3 @@
-let data = sessionStorage.getItem('key');
-if (data != "sulton..") {
-   document.location = "index.html";
-}
-document.querySelector(".logout").addEventListener("click", function() {
-   sessionStorage.removeItem('key');
-   sessionStorage.clear();
-   document.location = "index.html";
-});
-
-
 window.addEventListener("load", function () {
 	setTimeout(function () {	
 		document.querySelector(".left").style.left = "-50%";
