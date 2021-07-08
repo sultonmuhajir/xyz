@@ -37,5 +37,7 @@ form.onsubmit = () => {
       input.style.border = "1px solid red";
       error.style.visibility = "visible";
       return false;
+   } else {
+      localStorage.setItem("key", input.value);
    }
 }
