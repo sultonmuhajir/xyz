@@ -38,6 +38,6 @@ form.onsubmit = () => {
       error.style.visibility = "visible";
       return false;
    } else {
-      window.localStorage.setItem("key", input.value);
+      localStorage.setItem("key", input.value);
    }
 }

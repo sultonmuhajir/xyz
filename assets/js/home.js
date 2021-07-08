@@ -1,10 +1,10 @@
 const logout = document.querySelector(".logout");
-if (window.localStorage.getItem("key") != "sulton..") {
+if (localStorage.getItem("key") != "sulton..") {
    document.location = "index.html";
 }
 logout.addEventListener("click", function() {
-   window.localStorage.removeItem('key');
-   window.localStorage.clear();
+   localStorage.removeItem('key');
+   localStorage.clear();
    document.location = "index.html";
 });
 
