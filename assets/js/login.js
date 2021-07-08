@@ -30,14 +30,13 @@ input.addEventListener("keyup", function(event) {
 });
 
 
-form.onsubmit = () => {
+btn.addEventListener("click", function() {
    if (input.value == "" || input.value != "sulton..") {
       input.value = "";
       input.focus();
       input.style.border = "1px solid red";
       error.style.visibility = "visible";
-      return false;
    } else {
-      return true;
+      document.location = "home.html";
    }
-}
+});
