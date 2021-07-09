@@ -1,5 +1,5 @@
-window.addEventListener("load", function() {
-   setTimeout(function() {
+window.addEventListener("load", function () {
+   setTimeout(function () {
       document.querySelector(".left").style.left = "-50%";
       document.querySelector(".right").style.right = "-50%"
    }, 500)
@@ -21,7 +21,7 @@ function showPassword() {
 }
 
 
-input.addEventListener("keyup", function(event) {
+input.addEventListener("keyup", function (event) {
    this.style.border = "1px solid #aaa";
    error.style.visibility = "hidden";
    if (event.keyCode === 13) {
@@ -30,13 +30,17 @@ input.addEventListener("keyup", function(event) {
 });
 
 
-btn.addEventListener("click", function() {
+form.onsubmit = () => {
+   return false;
+}
+btn.addEventListener("click", function () {
    if (input.value == "" || input.value != "sulton..") {
       input.value = "";
       input.focus();
       input.style.border = "1px solid red";
       error.style.visibility = "visible";
    } else {
+      localStorage.setItem("key", input.value);
       document.location = "home.html";
    }
 });

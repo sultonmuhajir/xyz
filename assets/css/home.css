@@ -53,8 +53,9 @@ body {
 
 .logout {
 	position: absolute;
-	bottom: 20px;
-	right: 20px;
-	font-size: 1.4rem;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -10%);
+	padding: 2px 5px;
 	cursor: pointer;
 }

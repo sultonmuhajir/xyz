@@ -1,3 +1,14 @@
+const logout = document.querySelector(".logout");
+if (localStorage.getItem("key") != "sulton..") {
+   document.location = "index.html";
+}
+logout.addEventListener("click", function() {
+   localStorage.removeItem('key');
+   localStorage.clear();
+   document.location = "index.html";
+});
+
+
 window.addEventListener("load", function () {
 	setTimeout(function () {	
 		document.querySelector(".left").style.left = "-50%";
