@@ -26,7 +26,12 @@ function alert(text) {
 }
 
 
-document.querySelector(".btn").addEventListener("click", function() {
+document.querySelector(".btn-1").addEventListener("click", function () {
+	window.location = "card.html";
+});
+
+
+document.querySelector(".btn-2").addEventListener("click", function() {
 	alert("Buat kamu yang entah sengaja atau gak sengaja buka halaman ini,,").then((res) => {
 		if (res.isConfirmed) {
 			alert("Aku cuma mau ngingetin sesuatu..").then((res) => {

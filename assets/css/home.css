@@ -41,7 +41,6 @@ body {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -200%);
 	padding: .65rem 2rem;
 	font-size: 1rem;
 	cursor: pointer;
@@ -49,6 +48,14 @@ body {
 	color: #f0f5f9;
 	border: none;
 	border-radius: 4px;
+}
+
+.btn-1 {
+	transform: translate(-50%, -300%);
+}
+
+.btn-2 {
+	transform: translate(-50%, -150%);
 }
 
 .logout {
